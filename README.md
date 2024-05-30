@@ -1,13 +1,20 @@
 
 5.28
 yolo predict  model= runs/detect/train2/weights/best.pt   source= ../ligrkv7/dir05231_023.jpg
+
+
 yolo detect train data=wcoco.yaml model=yolov10s.yaml epochs=100 batch=32 imgsz=640
+
 (face19) lan@lan:~/det/yolov10$ 
+
 yolo detect train data=wcoco.yaml model=yolov10s.yaml    epochs=300 batch=32 imgsz=640   pretrained=runs/detect/train13/weights/best.pt
+
+
 yolo export model= runs/detect/train10/weights/best.pt format=onnx opset=12 simplify
 
 
 ./rknn_yolov5_demo  led11.rknn  led4180_035.jpg
+
 
 rga_api version 1.3.1_[11] (RGA is compiling with meson base: $PRODUCT_BASE)
 rga use 2.770000 ms
